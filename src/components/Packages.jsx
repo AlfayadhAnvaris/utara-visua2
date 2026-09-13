@@ -6,32 +6,32 @@ const cardStyles = [
   {
     bg: 'bg-white',
     text: 'text-brand-black',
-    badge: 'punk-tag-fill-blue',
-    btn: 'btn-punk-outline',
+    badge: 'bg-brand-blue text-white px-3 py-1 font-mono text-[10px] tracking-widest uppercase border-2 border-brand-black',
+    btn: 'bg-white text-brand-black border-2 border-brand-black hover:bg-brand-blue hover:text-white transition-colors duration-200',
     border: 'border-brand-black',
-    shadow: '5px 5px 0 #1228CC',
+    shadow: '6px 6px 0 #1228CC',
     checkColor: 'text-brand-blue',
     accent: '#1228CC',
   },
   {
     bg: 'bg-brand-red',
     text: 'text-white',
-    badge: 'punk-tag-fill-yellow',
-    btn: 'btn-punk-yellow',
+    badge: 'bg-brand-black text-white px-3 py-1 font-mono text-[10px] tracking-widest uppercase border-2 border-brand-black',
+    btn: 'bg-brand-black text-white border-2 border-brand-black hover:bg-white hover:text-brand-black transition-colors duration-200',
     border: 'border-brand-black',
-    shadow: '5px 5px 0 #FFFFFF',
-    checkColor: 'text-brand-blue',
-    accent: '#FFFFFF',
+    shadow: '6px 6px 0 #0D0D0D',
+    checkColor: 'text-brand-black',
+    accent: '#0D0D0D',
   },
   {
-    bg: 'bg-brand-black',
+    bg: 'bg-brand-blue',
     text: 'text-white',
-    badge: 'punk-tag-fill-red',
-    btn: 'btn-punk',
-    border: 'border-white/30',
-    shadow: '5px 5px 0 #E8152A',
+    badge: 'bg-brand-red text-white px-3 py-1 font-mono text-[10px] tracking-widest uppercase border-2 border-brand-black',
+    btn: 'bg-brand-red text-white border-2 border-brand-black hover:bg-white hover:text-brand-black transition-colors duration-200',
+    border: 'border-brand-black',
+    shadow: '6px 6px 0 #D31A21',
     checkColor: 'text-brand-red',
-    accent: '#E8152A',
+    accent: '#D31A21',
   },
 ];
 
@@ -49,13 +49,13 @@ function StarBurst({ size = 50, color = '#FFFFFF' }) {
 
 export default function Packages() {
   return (
-    <section id="packages" className="relative overflow-hidden bg-brand-blue border-t-[3px] border-brand-black">
+    <section id="packages" className="relative overflow-hidden bg-white border-t-[3px] border-brand-black">
 
       {/* Memphis polka dot bg */}
       <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
+        className="absolute inset-0 opacity-10 pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(circle, #1228CC 2px, transparent 2px)',
+          backgroundImage: 'radial-gradient(circle, #0D0D0D 2px, transparent 2px)',
           backgroundSize: '24px 24px',
         }}
       />
@@ -65,7 +65,7 @@ export default function Packages() {
         animate={{ rotate: 360 }} transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
         className="absolute top-10 right-10 hidden md:block"
       >
-        <StarBurst size={64} color="#E8152A" />
+        <StarBurst size={64} color="#D31A21" />
       </motion.div>
       <motion.div
         animate={{ rotate: -360 }} transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
@@ -118,7 +118,7 @@ export default function Packages() {
                 {/* Popular badge */}
                 {pkg.highlight && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="punk-tag-fill-yellow text-xs px-4 py-1.5 font-black">
+                    <span className="bg-brand-black text-white border-2 border-white text-[10px] px-4 py-1.5 font-black tracking-widest uppercase">
                       ★ POPULER ★
                     </span>
                   </div>
@@ -170,9 +170,9 @@ export default function Packages() {
                   target="_blank"
                   rel="noopener noreferrer"
                   id={`package-cta-${pkg.id}`}
-                  className={`${style.btn} w-full justify-center`}
+                  className={`${style.btn} flex items-center justify-center gap-2 py-4 font-condensed font-black text-lg tracking-widest uppercase mt-4`}
                 >
-                  <MessageCircle size={15} />
+                  <MessageCircle size={18} />
                   ORDER NOW
                 </a>
               </motion.div>

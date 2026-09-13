@@ -140,11 +140,11 @@ export default function Hero() {
             className="space-y-1"
           >
             <h1 className="font-condensed font-black text-5xl sm:text-6xl md:text-7xl text-brand-black leading-none tracking-tight uppercase">
-              VISUAL
-              <span className="text-brand-red"> YANG</span>
+              UTARAKAN
+              <span className="text-brand-red"> IDEMU</span>
               <br />
               <span className="relative inline-block">
-                BERTERIAK
+                VISUALKAN PESANMU
                 {/* Underline squiggle */}
                 <span className="absolute -bottom-3 left-0 right-0 flex justify-center">
                   <Squiggle color="#E8152A" width={280} />
@@ -199,28 +199,6 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Stats Row — zine card style */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.65 }}
-            className="flex gap-4 pt-6"
-          >
-            {[
-              { num: '50+', label: 'Project', color: 'bg-brand-red text-white' },
-              { num: '30+', label: 'Client', color: 'bg-brand-blue text-white' },
-              { num: '3', label: 'Paket', color: 'bg-brand-blue text-white' },
-            ].map(({ num, label, color }) => (
-              <div
-                key={label}
-                className={`${color} border-2 border-brand-black px-5 py-3 text-center`}
-                style={{ boxShadow: '3px 3px 0 #0D0D0D' }}
-              >
-                <p className="font-condensed font-black text-3xl leading-none">{num}</p>
-                <p className="font-mono text-[9px] tracking-[0.2em] uppercase mt-0.5 opacity-80">{label}</p>
-              </div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
 
