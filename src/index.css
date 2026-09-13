@@ -6,14 +6,11 @@
 
 /* ─── CSS Custom Properties (brand palette) ─── */
 :root {
-  --red:    #E8152A;
+  --red:    #D31A21;
   --red-dk: #B00E1F;
-  --yellow: #FFE500;
   --blue:   #1228CC;
   --black:  #0D0D0D;
-  --cream:  #F5EDD8;
-  --gray:   #8A8A8A;
-  --green:  #25D366;
+  --white:  #FFFFFF;
 }
 
 @layer base {
@@ -25,33 +22,34 @@
   }
 
   body {
-    background-color: #F5EDD8;
+    background-color: #D31A21; /* Dark Red Background */
     color: #0D0D0D;
     font-family: 'Space Grotesk', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-image: radial-gradient(circle, rgba(13,13,13,0.08) 1px, transparent 1px);
-    background-size: 28px 28px;
+    /* Heavy Black Halftone Pattern for Comic Style */
+    background-image: radial-gradient(circle, rgba(13,13,13,0.3) 2px, transparent 2px);
+    background-size: 8px 8px;
   }
 
   ::selection {
-    background: #E8152A;
-    color: #F5EDD8;
+    background: #D31A21;
+    color: #FFFFFF;
   }
 
   ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: #F5EDD8; }
-  ::-webkit-scrollbar-thumb { background: #E8152A; }
+  ::-webkit-scrollbar-track { background: #FFFFFF; }
+  ::-webkit-scrollbar-thumb { background: #D31A21; }
 }
 
 @layer components {
 
   /* ─── SECTION WRAPPERS ─── */
-  .section-cream { background-color: #F5EDD8; }
-  .section-black { background-color: #0D0D0D; color: #F5EDD8; }
-  .section-yellow { background-color: #FFE500; color: #0D0D0D; }
-  .section-red { background-color: #E8152A; color: #F5EDD8; }
+  .section-cream { background-color: #FFFFFF; }
+  .section-black { background-color: #1228CC; color: #FFFFFF; }
+  .section-yellow { background-color: #2840FF; color: #1228CC; }
+  .section-red { background-color: #D31A21; color: #FFFFFF; }
 
   /* ─── ZINE TORN EDGE ─── */
   .torn-bottom { position: relative; }
@@ -73,10 +71,10 @@
   }
 
   /* ─── DIY ZINE BORDERS ─── */
-  .zine-border     { border: 3px solid #0D0D0D; box-shadow: 4px 4px 0 #0D0D0D; }
-  .zine-border-red { border: 3px solid #0D0D0D; box-shadow: 5px 5px 0 #E8152A; }
-  .zine-border-yellow { border: 3px solid #0D0D0D; box-shadow: 5px 5px 0 #FFE500; }
-  .zine-border-blue { border: 3px solid #0D0D0D; box-shadow: 5px 5px 0 #1228CC; }
+  .zine-border     { border: 3px solid #1228CC; box-shadow: 4px 4px 0 #1228CC; }
+  .zine-border-red { border: 3px solid #1228CC; box-shadow: 5px 5px 0 #D31A21; }
+  .zine-border-yellow { border: 3px solid #1228CC; box-shadow: 5px 5px 0 #2840FF; }
+  .zine-border-blue { border: 3px solid #1228CC; box-shadow: 5px 5px 0 #1228CC; }
 
   /* ─── PUNK TAGS ─── */
   .punk-tag {
@@ -96,9 +94,9 @@
     letter-spacing: 0.25em;
     text-transform: uppercase;
     padding: 4px 12px;
-    background-color: #E8152A;
-    color: #F5EDD8;
-    border: 2px solid #0D0D0D;
+    background-color: #D31A21;
+    color: #FFFFFF;
+    border: 2px solid #1228CC;
   }
   .punk-tag-fill-yellow {
     display: inline-block;
@@ -107,9 +105,9 @@
     letter-spacing: 0.25em;
     text-transform: uppercase;
     padding: 4px 12px;
-    background-color: #FFE500;
-    color: #0D0D0D;
-    border: 2px solid #0D0D0D;
+    background-color: #2840FF;
+    color: #1228CC;
+    border: 2px solid #1228CC;
   }
   .punk-tag-fill-blue {
     display: inline-block;
@@ -119,8 +117,8 @@
     text-transform: uppercase;
     padding: 4px 12px;
     background-color: #1228CC;
-    color: #F5EDD8;
-    border: 2px solid #0D0D0D;
+    color: #FFFFFF;
+    border: 2px solid #1228CC;
   }
 
   /* ─── BUTTONS ─── */
@@ -129,26 +127,26 @@
     align-items: center;
     gap: 8px;
     padding: 16px 32px;
-    background-color: #E8152A;
-    color: #F5EDD8;
+    background-color: #D31A21;
+    color: #FFFFFF;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
     font-size: 14px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    border: 2px solid #0D0D0D;
-    box-shadow: 4px 4px 0 #0D0D0D;
+    border: 2px solid #1228CC;
+    box-shadow: 4px 4px 0 #1228CC;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     cursor: pointer;
     text-decoration: none;
   }
   .btn-punk:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 #0D0D0D;
+    box-shadow: 6px 6px 0 #1228CC;
   }
   .btn-punk:active {
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 #0D0D0D;
+    box-shadow: 2px 2px 0 #1228CC;
   }
 
   .btn-punk-yellow {
@@ -156,22 +154,22 @@
     align-items: center;
     gap: 8px;
     padding: 16px 32px;
-    background-color: #FFE500;
-    color: #0D0D0D;
+    background-color: #2840FF;
+    color: #1228CC;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
     font-size: 14px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    border: 2px solid #0D0D0D;
-    box-shadow: 4px 4px 0 #0D0D0D;
+    border: 2px solid #1228CC;
+    box-shadow: 4px 4px 0 #1228CC;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     cursor: pointer;
     text-decoration: none;
   }
   .btn-punk-yellow:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 #0D0D0D;
+    box-shadow: 6px 6px 0 #1228CC;
   }
 
   .btn-punk-outline {
@@ -180,23 +178,23 @@
     gap: 8px;
     padding: 16px 32px;
     background-color: transparent;
-    color: #0D0D0D;
+    color: #1228CC;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
     font-size: 14px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    border: 2px solid #0D0D0D;
-    box-shadow: 4px 4px 0 #0D0D0D;
+    border: 2px solid #1228CC;
+    box-shadow: 4px 4px 0 #1228CC;
     transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s, color 0.15s;
     cursor: pointer;
     text-decoration: none;
   }
   .btn-punk-outline:hover {
-    background-color: #0D0D0D;
-    color: #F5EDD8;
+    background-color: #1228CC;
+    color: #FFFFFF;
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 #E8152A;
+    box-shadow: 6px 6px 0 #D31A21;
   }
 
   .btn-wa {
@@ -205,21 +203,21 @@
     gap: 12px;
     padding: 16px 32px;
     background-color: #25D366;
-    color: #F5EDD8;
+    color: #FFFFFF;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
     font-size: 14px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    border: 2px solid #0D0D0D;
-    box-shadow: 4px 4px 0 #0D0D0D;
+    border: 2px solid #1228CC;
+    box-shadow: 4px 4px 0 #1228CC;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     cursor: pointer;
     text-decoration: none;
   }
   .btn-wa:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 #0D0D0D;
+    box-shadow: 6px 6px 0 #1228CC;
   }
 
   /* ─── MARQUEE ─── */

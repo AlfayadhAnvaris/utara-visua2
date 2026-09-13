@@ -45,14 +45,14 @@ export default function Hero() {
     document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col overflow-hidden bg-brand-cream pt-16">
+    <section id="hero" className="relative min-h-screen flex flex-col overflow-hidden bg-white pt-16">
 
       {/* ── Memphis background shapes ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Big red circle top-right */}
         <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-brand-red/20 border-[3px] border-brand-red/30" />
         {/* Yellow square bottom-left */}
-        <div className="absolute bottom-40 -left-12 w-48 h-48 bg-brand-yellow/30 border-[3px] border-brand-yellow rotate-12" />
+        <div className="absolute bottom-40 -left-12 w-48 h-48 bg-brand-blue/30 border-[3px] border-brand-blue rotate-12" />
         {/* Blue triangle */}
         <div className="absolute top-1/3 right-8 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[52px] border-b-brand-blue/20" />
         {/* Halftone dots strip */}
@@ -128,7 +128,7 @@ export default function Hero() {
               />
               {/* Small corner decorations */}
               <div className="absolute -top-2 -right-2 w-4 h-4 bg-brand-red border border-brand-black" />
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-brand-yellow border border-brand-black" />
+              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-brand-blue border border-brand-black" />
             </motion.div>
           </motion.div>
 
@@ -189,7 +189,7 @@ export default function Hero() {
               LIHAT KARYA KAMI
             </button>
             <a
-              href="https://wa.me/6289514448174"
+              href="https://wa.me/628975187077"
               target="_blank"
               rel="noopener noreferrer"
               id="hero-cta-wa"
@@ -207,9 +207,9 @@ export default function Hero() {
             className="flex gap-4 pt-6"
           >
             {[
-              { num: '50+', label: 'Project', color: 'bg-brand-red text-brand-cream' },
-              { num: '30+', label: 'Client', color: 'bg-brand-blue text-brand-cream' },
-              { num: '3', label: 'Paket', color: 'bg-brand-yellow text-brand-black' },
+              { num: '50+', label: 'Project', color: 'bg-brand-red text-white' },
+              { num: '30+', label: 'Client', color: 'bg-brand-blue text-white' },
+              { num: '3', label: 'Paket', color: 'bg-brand-blue text-white' },
             ].map(({ num, label, color }) => (
               <div
                 key={label}
@@ -229,7 +229,7 @@ export default function Hero() {
         <div className="marquee-container">
           <div className="marquee-track">
             {MARQUEE_ITEMS.map((item, i) => (
-              <span key={i} className="font-condensed font-black text-brand-yellow text-lg tracking-[0.2em] px-6 whitespace-nowrap uppercase">
+              <span key={i} className="font-condensed font-black text-white text-lg tracking-[0.2em] px-6 whitespace-nowrap uppercase">
                 {item}
               </span>
             ))}
@@ -242,7 +242,7 @@ export default function Hero() {
         <div className="marquee-container">
           <div className="marquee-track-rev">
             {MARQUEE_ITEMS_2.map((item, i) => (
-              <span key={i} className="font-mono text-brand-cream text-xs tracking-[0.25em] px-5 whitespace-nowrap uppercase">
+              <span key={i} className="font-mono text-white text-xs tracking-[0.25em] px-5 whitespace-nowrap uppercase">
                 {item}
               </span>
             ))}

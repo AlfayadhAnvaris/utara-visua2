@@ -4,31 +4,31 @@ import { packages } from '../data/packages';
 
 const cardStyles = [
   {
-    bg: 'bg-brand-cream',
+    bg: 'bg-white',
     text: 'text-brand-black',
     badge: 'punk-tag-fill-blue',
     btn: 'btn-punk-outline',
     border: 'border-brand-black',
-    shadow: '5px 5px 0 #0D0D0D',
+    shadow: '5px 5px 0 #1228CC',
     checkColor: 'text-brand-blue',
     accent: '#1228CC',
   },
   {
     bg: 'bg-brand-red',
-    text: 'text-brand-cream',
+    text: 'text-white',
     badge: 'punk-tag-fill-yellow',
     btn: 'btn-punk-yellow',
     border: 'border-brand-black',
-    shadow: '5px 5px 0 #FFE500',
-    checkColor: 'text-brand-yellow',
-    accent: '#FFE500',
+    shadow: '5px 5px 0 #FFFFFF',
+    checkColor: 'text-brand-blue',
+    accent: '#FFFFFF',
   },
   {
     bg: 'bg-brand-black',
-    text: 'text-brand-cream',
+    text: 'text-white',
     badge: 'punk-tag-fill-red',
     btn: 'btn-punk',
-    border: 'border-brand-cream/30',
+    border: 'border-white/30',
     shadow: '5px 5px 0 #E8152A',
     checkColor: 'text-brand-red',
     accent: '#E8152A',
@@ -36,12 +36,12 @@ const cardStyles = [
 ];
 
 // Starburst decoration
-function StarBurst({ size = 50, color = '#FFE500' }) {
+function StarBurst({ size = 50, color = '#FFFFFF' }) {
   return (
     <svg width={size} height={size} viewBox="0 0 60 60" fill="none">
       <path
         d="M30 2L34 22L52 10L38 26L58 30L38 34L52 50L34 38L30 58L26 38L8 50L22 34L2 30L22 26L8 10L26 22Z"
-        fill={color} stroke="#0D0D0D" strokeWidth="2"
+        fill={color} stroke="#1228CC" strokeWidth="2"
       />
     </svg>
   );
@@ -49,13 +49,13 @@ function StarBurst({ size = 50, color = '#FFE500' }) {
 
 export default function Packages() {
   return (
-    <section id="packages" className="relative overflow-hidden bg-brand-yellow border-t-[3px] border-brand-black">
+    <section id="packages" className="relative overflow-hidden bg-brand-blue border-t-[3px] border-brand-black">
 
       {/* Memphis polka dot bg */}
       <div
         className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(circle, #0D0D0D 2px, transparent 2px)',
+          backgroundImage: 'radial-gradient(circle, #1228CC 2px, transparent 2px)',
           backgroundSize: '24px 24px',
         }}
       />
@@ -90,7 +90,7 @@ export default function Packages() {
           <h2 className="font-condensed font-black text-7xl sm:text-8xl md:text-9xl text-brand-black leading-none uppercase">
             PAKET
             <br />
-            <span style={{ WebkitTextStroke: '3px #0D0D0D', color: 'transparent' }}>
+            <span style={{ WebkitTextStroke: '3px #1228CC', color: 'transparent' }}>
               LAYANAN
             </span>
           </h2>

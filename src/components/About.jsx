@@ -4,14 +4,14 @@ import { team } from '../data/team';
 // Silhouette placeholder avatar — pure SVG, no photos/emojis
 function AvatarPlaceholder({ index }) {
   const colors = [
-    { bg: '#E8152A', fill: '#F5EDD8' },
-    { bg: '#1228CC', fill: '#F5EDD8' },
-    { bg: '#FFE500', fill: '#0D0D0D' },
-    { bg: '#0D0D0D', fill: '#F5EDD8' },
-    { bg: '#9B30FF', fill: '#F5EDD8' },
-    { bg: '#2ECC40', fill: '#0D0D0D' },
-    { bg: '#E8152A', fill: '#FFE500' },
-    { bg: '#1228CC', fill: '#FFE500' },
+    { bg: '#D31A21', fill: '#FFFFFF' },
+    { bg: '#1228CC', fill: '#FFFFFF' },
+    { bg: '#FFFFFF', fill: '#1228CC' },
+    { bg: '#D31A21', fill: '#FFFFFF' },
+    { bg: '#1228CC', fill: '#FFFFFF' },
+    { bg: '#FFFFFF', fill: '#D31A21' },
+    { bg: '#D31A21', fill: '#FFFFFF' },
+    { bg: '#1228CC', fill: '#FFFFFF' },
   ];
   const { bg, fill } = colors[index % colors.length];
 
@@ -62,9 +62,9 @@ export default function About() {
     <section id="about" className="relative overflow-hidden">
 
       {/* ── Block 1: Black bg — Who We Are ── */}
-      <div className="bg-brand-black text-brand-cream py-20 border-b-[3px] border-brand-black relative overflow-hidden">
+      <div className="bg-brand-black text-white py-20 border-b-[3px] border-brand-black relative overflow-hidden">
         {/* Memphis bg shapes */}
-        <div className="absolute top-8 right-8 w-32 h-32 rounded-full border-[3px] border-brand-yellow/30 pointer-events-none" />
+        <div className="absolute top-8 right-8 w-32 h-32 rounded-full border-[3px] border-brand-blue/30 pointer-events-none" />
         <div className="absolute bottom-8 left-8 w-20 h-20 bg-brand-red/20 rotate-45 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-5">
@@ -83,18 +83,18 @@ export default function About() {
                   <div className="w-5 h-[3px] bg-brand-red" />
                   <span className="section-label text-brand-gray">Who We Are</span>
                 </div>
-                <h2 className="font-condensed font-black text-7xl sm:text-8xl text-brand-cream leading-none uppercase">
+                <h2 className="font-condensed font-black text-7xl sm:text-8xl text-white leading-none uppercase">
                   TENTANG
                   <br />
                   <span style={{ WebkitTextStroke: '2px #F5EDD8', color: 'transparent' }}>KAMI</span>
                 </h2>
               </div>
 
-              <div className="bg-brand-red border-[3px] border-brand-yellow p-5">
-                <p className="font-mono text-[10px] tracking-[0.3em] text-brand-yellow uppercase mb-3">
+              <div className="bg-brand-red border-[3px] border-brand-blue p-5">
+                <p className="font-mono text-[10px] tracking-[0.3em] text-brand-blue uppercase mb-3">
                   UTARA VISUA.ID
                 </p>
-                <p className="font-body text-brand-cream text-base leading-relaxed">
+                <p className="font-body text-white text-base leading-relaxed">
                   Digital Creative Agency yang membantu UMKM menyampaikan pesan promosi melalui desain poster digital yang{' '}
                   <strong>menarik, komunikatif,</strong> dan sesuai karakter brand-mu.
                 </p>
@@ -108,14 +108,14 @@ export default function About() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex gap-4 items-start border-b border-brand-cream/10 py-4 group"
+                    className="flex gap-4 items-start border-b border-white/10 py-4 group"
                   >
-                    <span className="font-display text-4xl text-brand-yellow/30 group-hover:text-brand-yellow transition-colors duration-300 w-8 shrink-0">
+                    <span className="font-display text-4xl text-brand-blue/30 group-hover:text-brand-blue transition-colors duration-300 w-8 shrink-0">
                       {v.mark}
                     </span>
                     <div>
-                      <p className="font-condensed font-black text-lg text-brand-cream tracking-wide uppercase">{v.title}</p>
-                      <p className="font-body text-brand-cream/60 text-sm mt-0.5">{v.desc}</p>
+                      <p className="font-condensed font-black text-lg text-white tracking-wide uppercase">{v.title}</p>
+                      <p className="font-body text-white/60 text-sm mt-0.5">{v.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -132,13 +132,13 @@ export default function About() {
             >
               {/* Big quote — Punk editorial */}
               <div
-                className="border-[3px] border-brand-cream/20 p-7 bg-brand-cream/5 relative"
+                className="border-[3px] border-white/20 p-7 bg-white/5 relative"
               >
-                <span className="font-display text-8xl text-brand-yellow/20 absolute top-0 left-4 leading-none">"</span>
-                <p className="font-condensed font-black text-3xl sm:text-4xl text-brand-cream leading-tight mt-4">
+                <span className="font-display text-8xl text-brand-blue/20 absolute top-0 left-4 leading-none">"</span>
+                <p className="font-condensed font-black text-3xl sm:text-4xl text-white leading-tight mt-4">
                   UTARAKAN IDEMU,
                   <span className="text-brand-red"> VISUALKAN</span>
-                  <span className="text-brand-yellow"> PESANMU.</span>
+                  <span className="text-brand-blue"> PESANMU.</span>
                 </p>
               </div>
 
@@ -153,11 +153,11 @@ export default function About() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 + 0.15 }}
-                      className="flex items-center gap-4 border-[2px] border-brand-cream/10 bg-brand-cream/5 px-5 py-4 hover:border-brand-yellow hover:bg-brand-yellow/10 transition-all duration-200 group cursor-default"
+                      className="flex items-center gap-4 border-[2px] border-white/10 bg-white/5 px-5 py-4 hover:border-brand-blue hover:bg-brand-blue/10 transition-all duration-200 group cursor-default"
                     >
-                      <span className="font-mono text-[10px] text-brand-yellow/60 group-hover:text-brand-yellow w-6 transition-colors">{t.mark}</span>
-                      <p className="font-condensed font-black text-xl text-brand-cream group-hover:text-brand-yellow transition-colors duration-200">{t.label}</p>
-                      <span className="ml-auto text-brand-cream/20 group-hover:text-brand-yellow text-lg transition-colors">→</span>
+                      <span className="font-mono text-[10px] text-brand-blue/60 group-hover:text-brand-blue w-6 transition-colors">{t.mark}</span>
+                      <p className="font-condensed font-black text-xl text-white group-hover:text-brand-blue transition-colors duration-200">{t.label}</p>
+                      <span className="ml-auto text-white/20 group-hover:text-brand-blue text-lg transition-colors">→</span>
                     </motion.div>
                   ))}
                 </div>
@@ -168,10 +168,10 @@ export default function About() {
                 {[
                   { n: '2023', l: 'Berdiri', c: 'bg-brand-red' },
                   { n: '8', l: 'Tim Aktif', c: 'bg-brand-blue' },
-                  { n: '50+', l: 'Projects', c: 'bg-brand-yellow text-brand-black' },
-                  { n: 'UMKM', l: 'Focus', c: 'bg-brand-cream text-brand-black' },
+                  { n: '50+', l: 'Projects', c: 'bg-brand-blue text-brand-black' },
+                  { n: 'UMKM', l: 'Focus', c: 'bg-white text-brand-black' },
                 ].map(({ n, l, c }) => (
-                  <div key={l} className={`${c} border-[3px] border-brand-cream/20 p-4`}>
+                  <div key={l} className={`${c} border-[3px] border-white/20 p-4`}>
                     <p className="font-display text-3xl leading-none">{n}</p>
                     <p className="font-mono text-[9px] tracking-widest uppercase mt-1 opacity-70">{l}</p>
                   </div>
@@ -188,7 +188,7 @@ export default function About() {
       </div>
 
       {/* ── Block 2: Cream bg — Team ── */}
-      <div className="bg-brand-cream py-20 border-t-[3px] border-brand-black">
+      <div className="bg-white py-20 border-t-[3px] border-brand-black">
         <div className="max-w-7xl mx-auto px-5">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -215,8 +215,8 @@ export default function About() {
           {/* Team Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-0">
             {team.map((member, i) => {
-              const bgColors = ['#E8152A','#1228CC','#FFE500','#0D0D0D','#9B30FF','#2ECC40','#E8152A','#1228CC'];
-              const textColors = ['#F5EDD8','#F5EDD8','#0D0D0D','#F5EDD8','#F5EDD8','#0D0D0D','#FFE500','#FFE500'];
+              const bgColors = ['#D31A21','#1228CC','#FFFFFF','#D31A21','#1228CC','#FFFFFF','#D31A21','#1228CC'];
+              const textColors = ['#FFFFFF','#FFFFFF','#1228CC','#FFFFFF','#FFFFFF','#D31A21','#FFFFFF','#FFFFFF'];
               const bg = bgColors[i % bgColors.length];
               const txtColor = textColors[i % textColors.length];
 
@@ -230,8 +230,14 @@ export default function About() {
                   className="group border-[3px] border-brand-black -mt-[3px] -ml-[3px] p-5 flex flex-col items-center text-center gap-4 cursor-default transition-all duration-200 hover:z-10 hover:scale-105 relative"
                   style={{ background: bg }}
                 >
-                  {/* Avatar Placeholder */}
-                  <AvatarPlaceholder index={i} />
+                  {/* Avatar */}
+                  {member.image ? (
+                    <div className="w-32 h-40 border-[3px] border-brand-black overflow-hidden bg-white flex items-center justify-center">
+                      <img src={member.image} alt={member.name} className="w-full h-full object-contain" />
+                    </div>
+                  ) : (
+                    <AvatarPlaceholder index={i} />
+                  )}
 
                   {/* Name & Role */}
                   <div>

@@ -8,20 +8,13 @@ export default {
     extend: {
       colors: {
         brand: {
-          red: '#E8152A',
+          red: '#D31A21',
           'red-dark': '#B00E1F',
-          yellow: '#FFE500',
-          'yellow-dark': '#D4B800',
           blue: '#1228CC',
           'blue-bright': '#2840FF',
           black: '#0D0D0D',
           'black-off': '#1A1A1A',
-          cream: '#F5EDD8',
-          'cream-dark': '#E8DFC8',
-          white: '#FAFAF5',
-          gray: '#8A8A8A',
-          green: '#2ECC40',
-          purple: '#9B30FF',
+          white: '#FFFFFF',
         },
       },
       fontFamily: {

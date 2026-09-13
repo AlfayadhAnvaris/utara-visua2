@@ -1,5 +1,12 @@
-// Team members data — sourced from uploaded team photo
-// Replace with actual photo paths when extracted
+import rafiImg from '../assets/team/rafi.png';
+import fatihImg from '../assets/team/fatih.png';
+import fadhliImg from '../assets/team/fadhli.png';
+import fairaImg from '../assets/team/faira.png';
+import giskaImg from '../assets/team/giska.png';
+import hadiImg from '../assets/team/hadi.png';
+import ranaImg from '../assets/team/rana.png';
+import zakiaImg from '../assets/team/zakia.png';
+
 export const team = [
   {
     id: 1,
@@ -7,6 +14,7 @@ export const team = [
     role: 'PROJECT LEADER',
     emoji: '👑',
     row: 1,
+    image: rafiImg,
   },
   {
     id: 2,
@@ -14,20 +22,23 @@ export const team = [
     role: 'PROJECT MANAGER',
     emoji: '📋',
     row: 1,
+    image: fatihImg,
   },
   {
     id: 3,
-    name: 'FADLI',
+    name: 'FADHLI',
     role: 'CLIENT RELATIONS',
     emoji: '🤝',
     row: 1,
+    image: fadhliImg,
   },
   {
     id: 4,
-    name: 'RARA',
+    name: 'FAIRA',
     role: 'RESEARCH & STRAT.',
     emoji: '🔬',
     row: 1,
+    image: fairaImg,
   },
   {
     id: 5,
@@ -35,6 +46,7 @@ export const team = [
     role: 'COPYWRITER',
     emoji: '✍️',
     row: 2,
+    image: giskaImg,
   },
   {
     id: 6,
@@ -42,6 +54,7 @@ export const team = [
     role: 'GRAPHIC DESAINER',
     emoji: '🎨',
     row: 2,
+    image: hadiImg,
   },
   {
     id: 7,
@@ -49,6 +62,7 @@ export const team = [
     role: 'VISUAL CREATOR',
     emoji: '📸',
     row: 2,
+    image: ranaImg,
   },
   {
     id: 8,
@@ -56,5 +70,6 @@ export const team = [
     role: 'QC & MARKETING',
     emoji: '📊',
     row: 2,
+    image: zakiaImg,
   },
 ];

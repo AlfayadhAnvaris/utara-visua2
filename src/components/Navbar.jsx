@@ -44,8 +44,8 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-            ? 'bg-brand-cream border-b-[3px] border-brand-black py-2'
-            : 'bg-brand-cream/90 backdrop-blur-sm py-3'
+            ? 'bg-white border-b-[3px] border-brand-black py-2'
+            : 'bg-white/90 backdrop-blur-sm py-3'
           }`}
       >
         <div className="max-w-7xl mx-auto px-5 flex items-center justify-between">
@@ -68,7 +68,7 @@ export default function Navbar() {
                     onClick={() => handleNavClick(link.href)}
                     id={`nav-${link.label.toLowerCase()}`}
                     className={`font-mono text-[11px] tracking-[0.2em] uppercase px-4 py-2 transition-all duration-150 border-2 ${isActive
-                        ? 'bg-brand-black text-brand-cream border-brand-black'
+                        ? 'bg-brand-black text-white border-brand-black'
                         : 'text-brand-black border-transparent hover:border-brand-black'
                       }`}
                   >
@@ -81,7 +81,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <a
-            href="https://wa.me/6289514448174"
+            href="https://wa.me/628975187077"
             target="_blank"
             rel="noopener noreferrer"
             id="nav-cta-wa"
@@ -94,7 +94,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             id="nav-mobile-toggle"
-            className="md:hidden w-10 h-10 border-2 border-brand-black flex items-center justify-center bg-brand-cream hover:bg-brand-black hover:text-brand-cream transition-colors duration-200"
+            className="md:hidden w-10 h-10 border-2 border-brand-black flex items-center justify-center bg-white hover:bg-brand-black hover:text-white transition-colors duration-200"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={18} /> : <Menu size={18} />}
@@ -110,13 +110,13 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-brand-cream pt-20 px-6 pb-8 flex flex-col"
+            className="fixed inset-0 z-40 bg-white pt-20 px-6 pb-8 flex flex-col"
             id="mobile-menu"
-            style={{ borderBottom: '3px solid #0D0D0D' }}
+            style={{ borderBottom: '3px solid #1228CC' }}
           >
             {/* Memphis decorative dots */}
             <div className="absolute top-24 right-8 flex gap-2">
-              {['bg-brand-red', 'bg-brand-yellow', 'bg-brand-blue'].map((c, i) => (
+              {['bg-brand-red', 'bg-brand-blue', 'bg-brand-blue'].map((c, i) => (
                 <div key={i} className={`w-3 h-3 rounded-full ${c} border border-brand-black`} />
               ))}
             </div>
@@ -140,7 +140,7 @@ export default function Navbar() {
             </ul>
 
             <a
-              href="https://wa.me/6289514448174"
+              href="https://wa.me/628975187077"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-punk w-full justify-center"

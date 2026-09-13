@@ -5,14 +5,14 @@ import { projects, categories } from '../data/projects';
 
 // Color sets for placeholder cards — Y2K palette
 const PLACEHOLDER_COLORS = [
-  { bg: '#E8152A', text: '#F5EDD8', accent: '#FFE500' },
-  { bg: '#FFE500', text: '#0D0D0D', accent: '#E8152A' },
-  { bg: '#1228CC', text: '#F5EDD8', accent: '#FFE500' },
-  { bg: '#0D0D0D', text: '#F5EDD8', accent: '#E8152A' },
-  { bg: '#F5EDD8', text: '#0D0D0D', accent: '#1228CC' },
-  { bg: '#9B30FF', text: '#F5EDD8', accent: '#FFE500' },
-  { bg: '#2ECC40', text: '#0D0D0D', accent: '#E8152A' },
-  { bg: '#E8152A', text: '#F5EDD8', accent: '#1228CC' },
+  { bg: '#E8152A', text: '#FFFFFF', accent: '#FFFFFF' },
+  { bg: '#FFFFFF', text: '#1228CC', accent: '#E8152A' },
+  { bg: '#1228CC', text: '#FFFFFF', accent: '#FFFFFF' },
+  { bg: '#1228CC', text: '#FFFFFF', accent: '#E8152A' },
+  { bg: '#FFFFFF', text: '#1228CC', accent: '#1228CC' },
+  { bg: '#9B30FF', text: '#FFFFFF', accent: '#FFFFFF' },
+  { bg: '#2ECC40', text: '#1228CC', accent: '#E8152A' },
+  { bg: '#E8152A', text: '#FFFFFF', accent: '#1228CC' },
 ];
 
 // Memphis SVG patterns for placeholders
@@ -99,24 +99,28 @@ function ProjectModal({ project, colorSet, onClose }) {
         exit={{ opacity: 0, scale: 0.9 }}
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-3xl max-h-[90vh] overflow-y-auto border-[3px] border-brand-black bg-brand-cream"
-        style={{ boxShadow: '10px 10px 0 #0D0D0D' }}
+        className="w-full max-w-3xl max-h-[90vh] overflow-y-auto border-[3px] border-brand-black bg-white"
+        style={{ boxShadow: '10px 10px 0 #1228CC' }}
         id="project-modal-content"
       >
         {/* Close */}
         <button
           onClick={onClose}
           id="project-modal-close"
-          className="absolute top-4 right-4 z-10 w-10 h-10 bg-brand-black text-brand-cream flex items-center justify-center hover:bg-brand-red transition-colors duration-150 border-2 border-brand-black"
+          className="absolute top-4 right-4 z-10 w-10 h-10 bg-brand-black text-white flex items-center justify-center hover:bg-brand-red transition-colors duration-150 border-2 border-brand-black"
           aria-label="Close modal"
         >
           <X size={18} />
         </button>
 
         <div className="grid md:grid-cols-2">
-          {/* Placeholder "image" */}
-          <div className="relative overflow-hidden aspect-square md:aspect-auto" style={{ minHeight: 280 }}>
-            <PlaceholderCard project={project} index={project.id - 1} colorSet={colorSet} />
+          {/* Image or Placeholder */}
+          <div className="relative overflow-hidden aspect-square md:aspect-auto bg-brand-black" style={{ minHeight: 280 }}>
+            {project.image ? (
+              <img src={project.image} alt={project.title} className="w-full h-full object-contain p-4" />
+            ) : (
+              <PlaceholderCard project={project} index={project.id - 1} colorSet={colorSet} />
+            )}
           </div>
 
           {/* Details */}
@@ -166,7 +170,7 @@ function ProjectModal({ project, colorSet, onClose }) {
             <div className="h-[2px] bg-brand-black mt-auto" />
 
             <a
-              href="https://wa.me/6289514448174"
+              href="https://wa.me/628975187077"
               target="_blank"
               rel="noopener noreferrer"
               id="modal-cta-wa"
@@ -197,12 +201,12 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="relative py-20 bg-brand-cream overflow-hidden">
+    <section id="portfolio" className="relative py-20 bg-white overflow-hidden">
       {/* Top torn/border accent */}
       <div className="absolute top-0 left-0 right-0 h-[3px] bg-brand-black" />
 
       {/* Memphis decorative shape bg */}
-      <div className="absolute top-12 right-0 w-40 h-40 bg-brand-yellow/25 border-[3px] border-brand-yellow/40 rotate-12 -translate-y-12 translate-x-12 pointer-events-none" />
+      <div className="absolute top-12 right-0 w-40 h-40 bg-brand-blue/25 border-[3px] border-brand-blue/40 rotate-12 -translate-y-12 translate-x-12 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-5">
         {/* Header */}
@@ -212,6 +216,7 @@ export default function Portfolio() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-12"
+          data-aos="fade-up"
         >
           <div className="flex items-center gap-3 mb-3">
             <div className="w-6 h-[3px] bg-brand-red" />
@@ -220,9 +225,9 @@ export default function Portfolio() {
           <h2 className="font-condensed font-black text-7xl sm:text-8xl md:text-9xl text-brand-black leading-none uppercase">
             PORTO<br />
             <span
-              className="text-brand-cream"
+              className="text-white"
               style={{
-                WebkitTextStroke: '3px #0D0D0D',
+                WebkitTextStroke: '3px #1228CC',
               }}
             >
               FOLIO
@@ -234,12 +239,10 @@ export default function Portfolio() {
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+        <div
           className="flex flex-wrap gap-2 mb-10"
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
           {categories.map((cat) => (
             <button
@@ -248,17 +251,22 @@ export default function Portfolio() {
               id={`filter-${cat.toLowerCase().replace(/\s/g, '-')}`}
               className={`font-mono text-[10px] tracking-[0.2em] uppercase px-4 py-2 border-2 border-brand-black transition-all duration-150 ${
                 activeCategory === cat
-                  ? 'bg-brand-black text-brand-cream'
-                  : 'bg-transparent text-brand-black hover:bg-brand-black hover:text-brand-cream'
+                  ? 'bg-brand-black text-white'
+                  : 'bg-transparent text-brand-black hover:bg-brand-black hover:text-white'
               }`}
             >
               {cat}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Projects Grid */}
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
+        <motion.div 
+          layout
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <AnimatePresence mode="popLayout">
             {filtered.map((project, i) => {
               const colorSet = PLACEHOLDER_COLORS[i % PLACEHOLDER_COLORS.length];
@@ -276,12 +284,16 @@ export default function Portfolio() {
                   style={{ aspectRatio: '3/4' }}
                   whileHover={{ zIndex: 10, scale: 1.02 }}
                 >
-                  <PlaceholderCard project={project} index={i} colorSet={colorSet} />
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <PlaceholderCard project={project} index={i} colorSet={colorSet} />
+                  )}
 
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-brand-black/0 group-hover:bg-brand-black/20 transition-all duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-brand-cream border-2 border-brand-black px-4 py-2 flex items-center gap-2"
-                      style={{ boxShadow: '3px 3px 0 #0D0D0D' }}>
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white border-2 border-brand-black px-4 py-2 flex items-center gap-2"
+                      style={{ boxShadow: '3px 3px 0 #1228CC' }}>
                       <span className="font-mono text-[10px] tracking-widest uppercase text-brand-black">Detail</span>
                       <ArrowUpRight size={12} />
                     </div>
@@ -304,7 +316,7 @@ export default function Portfolio() {
             PUNYA PROJECT YANG INGIN DIVISUALKAN?
           </p>
           <a
-            href="https://wa.me/6289514448174"
+            href="https://wa.me/628975187077"
             target="_blank"
             rel="noopener noreferrer"
             id="portfolio-cta-wa"

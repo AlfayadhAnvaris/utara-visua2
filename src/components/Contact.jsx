@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageCircle, ArrowUpRight, Mail } from 'lucide-react';
+import { MessageCircle, ArrowUpRight, Mail, MapPin } from 'lucide-react';
 
 // Custom Instagram SVG
 function InstagramIcon({ size = 20 }) {
@@ -23,48 +23,57 @@ const socials = [
   {
     id: 'wa',
     label: 'WhatsApp',
-    handle: '+62 895-1444-8174',
-    href: 'https://wa.me/6289514448174',
+    handle: '08975187077',
+    href: 'https://wa.me/628975187077',
     icon: <MessageCircle size={18} />,
     bg: '#25D366',
-    text: '#0D0D0D',
+    text: '#1228CC',
   },
   {
     id: 'ig',
     label: 'Instagram',
-    handle: '@utara.visua',
-    href: 'https://instagram.com/utara.visua',
+    handle: '@utaravisua.id',
+    href: 'https://instagram.com/utaravisua.id',
     icon: <InstagramIcon size={18} />,
     bg: '#E8152A',
-    text: '#F5EDD8',
+    text: '#FFFFFF',
   },
   {
     id: 'email',
     label: 'Email',
-    handle: 'utaravisua@gmail.com',
-    href: 'mailto:utaravisua@gmail.com',
+    handle: 'utaravisuaid@gmail.com',
+    href: 'mailto:utaravisuaid@gmail.com',
     icon: <Mail size={18} />,
     bg: '#1228CC',
-    text: '#F5EDD8',
+    text: '#FFFFFF',
+  },
+  {
+    id: 'location',
+    label: 'Location',
+    handle: 'Padang, Limau Manih',
+    href: '#',
+    icon: <MapPin size={18} />,
+    bg: '#FFFFFF',
+    text: '#1228CC',
   },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative bg-brand-cream border-t-[3px] border-brand-black overflow-hidden">
+    <section id="contact" className="relative bg-white border-t-[3px] border-brand-black overflow-hidden">
 
       {/* Memphis diagonal stripe accent top */}
       <div className="h-3 bg-brand-black"
         style={{
-          backgroundImage: 'repeating-linear-gradient(45deg, #E8152A 0, #E8152A 10px, #0D0D0D 10px, #0D0D0D 20px)',
+          backgroundImage: 'repeating-linear-gradient(45deg, #E8152A 0, #E8152A 10px, #1228CC 10px, #1228CC 20px)',
         }}
       />
 
       {/* Memphis bg shapes */}
-      <div className="absolute top-20 right-0 w-48 h-48 bg-brand-yellow/20 border-[3px] border-brand-yellow/30 rounded-full translate-x-16 pointer-events-none" />
+      <div className="absolute top-20 right-0 w-48 h-48 bg-brand-blue/20 border-[3px] border-brand-blue/30 rounded-full translate-x-16 pointer-events-none" />
       <div className="absolute bottom-16 left-0 w-32 h-32 bg-brand-red/15 rotate-12 -translate-x-8 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-5 py-20">
+      <div className="max-w-7xl mx-auto px-5 py-20" data-aos="fade-right">
 
         {/* Header */}
         <motion.div
@@ -81,7 +90,7 @@ export default function Contact() {
           <h2 className="font-condensed font-black text-7xl sm:text-8xl md:text-9xl text-brand-black leading-none uppercase">
             HUBUNGI
             <br />
-            <span style={{ WebkitTextStroke: '3px #0D0D0D', color: 'transparent' }}>KAMI</span>
+            <span style={{ WebkitTextStroke: '3px #1228CC', color: 'transparent' }}>KAMI</span>
           </h2>
         </motion.div>
 
@@ -98,7 +107,7 @@ export default function Contact() {
             <p className="font-body text-brand-black/70 text-lg leading-relaxed">
               Konsultasi pertama{' '}
               <span
-                className="font-condensed font-black text-2xl text-brand-cream px-2 inline-block bg-brand-red border-2 border-brand-black"
+                className="font-condensed font-black text-2xl text-white px-2 inline-block bg-brand-red border-2 border-brand-black"
               >
                 GRATIS
               </span>
@@ -116,10 +125,10 @@ export default function Contact() {
                   transition={{ delay: i * 0.08 }}
                   className="flex items-center gap-0 border-b-[2px] border-brand-black last:border-b-0 group hover:bg-brand-black transition-colors duration-150 cursor-default"
                 >
-                  <span className="font-display text-3xl text-brand-black/20 group-hover:text-brand-yellow w-16 text-center py-4 border-r-[2px] border-brand-black shrink-0 transition-colors duration-150">
+                  <span className="font-display text-3xl text-brand-black/20 group-hover:text-brand-blue w-16 text-center py-4 border-r-[2px] border-brand-black shrink-0 transition-colors duration-150">
                     {num}
                   </span>
-                  <p className="font-body text-brand-black group-hover:text-brand-cream text-sm px-5 transition-colors duration-150">
+                  <p className="font-body text-brand-black group-hover:text-white text-sm px-5 transition-colors duration-150">
                     {text}
                   </p>
                 </motion.div>
@@ -128,7 +137,7 @@ export default function Contact() {
 
             {/* WA Button — big */}
             <a
-              href="https://wa.me/6289514448174"
+              href="https://wa.me/628975187077"
               target="_blank"
               rel="noopener noreferrer"
               id="contact-main-wa"
@@ -166,11 +175,11 @@ export default function Contact() {
                 style={{
                   background: s.bg,
                   color: s.text,
-                  boxShadow: '4px 4px 0 #0D0D0D',
+                  boxShadow: '4px 4px 0 #1228CC',
                   transition: 'box-shadow 0.15s, transform 0.15s',
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.boxShadow = '6px 6px 0 #0D0D0D')}
-                onMouseLeave={(e) => (e.currentTarget.style.boxShadow = '4px 4px 0 #0D0D0D')}
+                onMouseEnter={(e) => (e.currentTarget.style.boxShadow = '6px 6px 0 #1228CC')}
+                onMouseLeave={(e) => (e.currentTarget.style.boxShadow = '4px 4px 0 #1228CC')}
               >
                 <div
                   className="w-10 h-10 border-2 flex items-center justify-center shrink-0"
@@ -188,16 +197,16 @@ export default function Contact() {
 
             {/* Zine quote block */}
             <div
-              className="border-[3px] border-brand-black bg-brand-black text-brand-cream p-6 mt-4"
+              className="border-[3px] border-brand-black bg-brand-black text-white p-6 mt-4"
               style={{ boxShadow: '5px 5px 0 #E8152A' }}
             >
               <p className="font-condensed font-black text-2xl sm:text-3xl leading-tight">
                 "JANGAN BIARKAN<br />
                 BRAND-MU
                 <span className="text-brand-red"> TIDAK</span>
-                <span className="text-brand-yellow"> TERLIHAT."</span>
+                <span className="text-brand-blue"> TERLIHAT."</span>
               </p>
-              <p className="font-mono text-brand-cream/40 text-[9px] tracking-widest uppercase mt-3">
+              <p className="font-mono text-white/40 text-[9px] tracking-widest uppercase mt-3">
                 — Utara Visua, {new Date().getFullYear()}
               </p>
             </div>
@@ -208,7 +217,7 @@ export default function Contact() {
       {/* Bottom diagonal stripe */}
       <div className="h-3 bg-brand-black"
         style={{
-          backgroundImage: 'repeating-linear-gradient(45deg, #1228CC 0, #1228CC 10px, #0D0D0D 10px, #0D0D0D 20px)',
+          backgroundImage: 'repeating-linear-gradient(45deg, #1228CC 0, #1228CC 10px, #1228CC 10px, #1228CC 20px)',
         }}
       />
     </section>
