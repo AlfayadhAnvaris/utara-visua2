@@ -15,6 +15,8 @@ export const team = [
     emoji: '👑',
     row: 1,
     image: rafiImg,
+    objectPosition: '52% 16.6%',
+    scale: 1.35,
   },
   {
     id: 2,
@@ -23,6 +25,8 @@ export const team = [
     emoji: '📋',
     row: 1,
     image: fatihImg,
+    objectPosition: '47.3% 21%',
+    scale: 4.20,
   },
   {
     id: 3,
@@ -31,6 +35,8 @@ export const team = [
     emoji: '🤝',
     row: 1,
     image: fadhliImg,
+    objectPosition: '51.2% -2%',
+    scale: 1.95,
   },
   {
     id: 4,
@@ -39,6 +45,8 @@ export const team = [
     emoji: '🔬',
     row: 1,
     image: fairaImg,
+    objectPosition: '56.6% 37.2%',
+    scale: 2.45,
   },
   {
     id: 5,
@@ -47,6 +55,8 @@ export const team = [
     emoji: '✍️',
     row: 2,
     image: giskaImg,
+    objectPosition: '52.6% 1%',
+    scale: 3.30,
   },
   {
     id: 6,
@@ -55,6 +65,8 @@ export const team = [
     emoji: '🎨',
     row: 2,
     image: hadiImg,
+    objectPosition: '49.1% -9%',
+    scale: 2.10,
   },
   {
     id: 7,
@@ -63,6 +75,8 @@ export const team = [
     emoji: '📸',
     row: 2,
     image: ranaImg,
+    objectPosition: '50.4% 12%',
+    scale: 2.85,
   },
   {
     id: 8,
@@ -71,5 +85,7 @@ export const team = [
     emoji: '📊',
     row: 2,
     image: zakiaImg,
+    objectPosition: '58.7% 15%',
+    scale: 2.05,
   },
 ];

@@ -123,8 +123,8 @@ export default function Footer() {
                 className="border-[3px] border-brand-blue/50 px-5 py-3 rotate-[-4deg] inline-block"
                 style={{ boxShadow: '3px 3px 0 #E8152A' }}
               >
-                <p className="font-display text-brand-blue text-base tracking-[0.3em]">CERTIFIED</p>
-                <p className="font-mono text-brand-blue/50 text-[9px] tracking-[0.35em]">UTARA VISUA</p>
+                <p className="font-display text-white text-base tracking-[0.3em]">CERTIFIED</p>
+                <p className="font-mono text-white/50 text-[9px] tracking-[0.35em]">UTARA VISUA</p>
               </div>
             </div>
           </div>

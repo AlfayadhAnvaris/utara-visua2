@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowUpRight, Calendar, Tag, Package } from 'lucide-react';
+import { X, ArrowUpRight } from 'lucide-react';
 import { projects, categories } from '../data/projects';
 
 // Color sets for placeholder cards — Y2K palette
@@ -80,7 +80,7 @@ function PlaceholderCard({ project, index, colorSet }) {
 }
 
 function ProjectModal({ project, colorSet, onClose }) {
-  const { bg, text, accent } = colorSet;
+  const { bg, text } = colorSet;
 
   return (
     <motion.div

@@ -135,10 +135,9 @@ export default function About() {
                 className="border-[3px] border-white/20 p-7 bg-white/5 relative"
               >
                 <span className="font-display text-8xl text-brand-blue/20 absolute top-0 left-4 leading-none">"</span>
-                <p className="font-condensed font-black text-3xl sm:text-4xl text-white leading-tight mt-4">
-                  UTARAKAN IDEMU,
-                  <span className="text-brand-red"> VISUALKAN</span>
-                  <span className="text-brand-blue"> PESANMU.</span>
+                <p className="font-condensed font-black text-3xl sm:text-4xl text-brand-red leading-tight mt-4">
+                  UTARAKAN IDEMU,<br />
+                  <span className="text-white">VISUALKAN PESANMU.</span>
                 </p>
               </div>
 
@@ -168,7 +167,7 @@ export default function About() {
                 {[
                   { n: '2023', l: 'Berdiri', c: 'bg-brand-red' },
                   { n: '8', l: 'Tim Aktif', c: 'bg-brand-blue' },
-                  { n: '50+', l: 'Projects', c: 'bg-brand-blue text-brand-black' },
+                  { n: '5', l: 'Projects', c: 'bg-brand-blue text-brand-black' },
                   { n: 'UMKM', l: 'Focus', c: 'bg-white text-brand-black' },
                 ].map(({ n, l, c }) => (
                   <div key={l} className={`${c} border-[3px] border-white/20 p-4`}>
@@ -232,8 +231,17 @@ export default function About() {
                 >
                   {/* Avatar */}
                   {member.image ? (
-                    <div className="w-32 h-40 border-[3px] border-brand-black overflow-hidden bg-white flex items-center justify-center">
-                      <img src={member.image} alt={member.name} className="w-full h-full object-contain" />
+                    <div className="w-32 h-36 border-[3px] border-brand-black overflow-hidden bg-white flex items-center justify-center relative">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        style={{
+                          objectPosition: member.objectPosition || '50% 20%',
+                          transform: `scale(${member.scale || 1.3})`,
+                          transformOrigin: member.objectPosition || '50% 20%',
+                        }}
+                      />
                     </div>
                   ) : (
                     <AvatarPlaceholder index={i} />

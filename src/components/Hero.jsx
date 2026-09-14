@@ -36,8 +36,8 @@ const MARQUEE_ITEMS = [
 
 const MARQUEE_ITEMS_2 = [
   '◆ UTARA VISUA', '— SINCE 2023', '◆ MALANG', '— INDONESIA',
-  '◆ 50+ PROJECTS', '— CREATIVE STUDIO', '◆ UTARA VISUA', '— SINCE 2023',
-  '◆ MALANG', '— INDONESIA', '◆ 50+ PROJECTS', '— CREATIVE STUDIO',
+  '◆ 5 PROJECTS', '— CREATIVE STUDIO', '◆ UTARA VISUA', '— SINCE 2023',
+  '◆ MALANG', '— INDONESIA', '◆ 5 PROJECTS', '— CREATIVE STUDIO',
 ];
 
 export default function Hero() {
@@ -139,11 +139,10 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="space-y-1"
           >
-            <h1 className="font-condensed font-black text-5xl sm:text-6xl md:text-7xl text-brand-black leading-none tracking-tight uppercase">
-              UTARAKAN
-              <span className="text-brand-red"> IDEMU</span>
+            <h1 className="font-condensed font-black text-5xl sm:text-6xl md:text-7xl leading-none tracking-tight uppercase">
+              <span className="text-brand-red">UTARAKAN IDEMU</span>
               <br />
-              <span className="relative inline-block">
+              <span className="relative inline-block text-brand-black">
                 VISUALKAN PESANMU
                 {/* Underline squiggle */}
                 <span className="absolute -bottom-3 left-0 right-0 flex justify-center">
@@ -153,15 +152,7 @@ export default function Hero() {
             </h1>
           </motion.div>
 
-          {/* Sub tagline */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.45 }}
-            className="font-mono text-brand-black/70 text-xs sm:text-sm tracking-[0.25em] uppercase mt-6"
-          >
-            Utarakan Idemu — Visualkan Pesanmu
-          </motion.p>
+          {/* Sub tagline removed */}
 
           {/* Description */}
           <motion.p
