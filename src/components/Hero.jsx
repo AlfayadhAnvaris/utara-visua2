@@ -144,10 +144,10 @@ export default function Hero() {
               <span className="text-brand-red"> IDEMU</span>
               <br />
               <span className="relative inline-block">
-                VISUALKAN <span className="text-brand-red"></span>
+                VISUALKAN <span className="text-brand-red">PESANMU</span>
                 {/* Underline squiggle */}
                 <span className="absolute -bottom-3 left-0 right-0 flex justify-center">
-                  <Squiggle color="#E8152A" width={280} />
+                  <Squiggle color="#E8152A" width={360} />
                 </span>
               </span>
             </h1>
