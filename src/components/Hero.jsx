@@ -139,11 +139,12 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="space-y-1"
           >
-            <h1 className="font-condensed font-black text-5xl sm:text-6xl md:text-7xl leading-none tracking-tight uppercase">
-              <span className="text-brand-red">UTARAKAN IDEMU</span>
+            <h1 className="font-condensed font-black text-5xl sm:text-6xl md:text-7xl text-brand-black leading-none tracking-tight uppercase">
+              UTARAKAN
+              <span className="text-brand-red"> IDEMU</span>
               <br />
-              <span className="relative inline-block text-brand-black">
-                VISUALKAN PESANMU
+              <span className="relative inline-block">
+                VISUALKAN <span className="text-brand-red"></span>
                 {/* Underline squiggle */}
                 <span className="absolute -bottom-3 left-0 right-0 flex justify-center">
                   <Squiggle color="#E8152A" width={280} />
@@ -152,7 +153,8 @@ export default function Hero() {
             </h1>
           </motion.div>
 
-          {/* Sub tagline removed */}
+          {/* Sub tagline */}
+
 
           {/* Description */}
           <motion.p

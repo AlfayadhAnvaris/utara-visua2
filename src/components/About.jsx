@@ -165,7 +165,7 @@ export default function About() {
               {/* Mini stats */}
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { n: '2023', l: 'Berdiri', c: 'bg-brand-red' },
+                  { n: '2026', l: 'Berdiri', c: 'bg-brand-red' },
                   { n: '8', l: 'Tim Aktif', c: 'bg-brand-blue' },
                   { n: '5', l: 'Projects', c: 'bg-brand-blue text-brand-black' },
                   { n: 'UMKM', l: 'Focus', c: 'bg-white text-brand-black' },
@@ -214,8 +214,8 @@ export default function About() {
           {/* Team Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-0">
             {team.map((member, i) => {
-              const bgColors = ['#D31A21','#1228CC','#FFFFFF','#D31A21','#1228CC','#FFFFFF','#D31A21','#1228CC'];
-              const textColors = ['#FFFFFF','#FFFFFF','#1228CC','#FFFFFF','#FFFFFF','#D31A21','#FFFFFF','#FFFFFF'];
+              const bgColors = ['#D31A21', '#1228CC', '#FFFFFF', '#D31A21', '#1228CC', '#FFFFFF', '#D31A21', '#1228CC'];
+              const textColors = ['#FFFFFF', '#FFFFFF', '#1228CC', '#FFFFFF', '#FFFFFF', '#D31A21', '#FFFFFF', '#FFFFFF'];
               const bg = bgColors[i % bgColors.length];
               const txtColor = textColors[i % textColors.length];
 
